@@ -1,0 +1,6 @@
+component,knockout_cost_AUPRC,seeds_consistent,verdict
+balanced-batch sampling,-0.041,4/4,adopted
+RankNet-style ranking,-0.033,4/4,adopted
+40-snapshot ensemble,-0.028,4/4,adopted
+temperature calibration,-0.016,4/4,adopted
+InterPro domain spectrum,-0.011,4/4,adopted

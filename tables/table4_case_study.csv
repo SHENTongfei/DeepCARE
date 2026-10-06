@@ -1,0 +1,5 @@
+pair,block_z,percentile,controlled_rank,family_coverage,outcome
+P1 (Cor a 1 | Cor a 12),0.94,86,1/3,dense,recovered
+P2 (Cor a 13 | Cor a 2),0.91,86,1/3,dense,recovered
+P3 (Tri a 12 | Tri a 29),0.83,88,2/3,moderate,recovered
+P4 (Tri a 30 | Tri a 37),-0.44,33,n/a,sparse,missed (boundary)
