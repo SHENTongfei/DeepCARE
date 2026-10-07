@@ -52,13 +52,15 @@ released slice, including the per-label breakdown:
 python code/evaluate_holdout.py --data data/holdout_gold_pairs_sample.csv
 ```
 
-Expected output (values match Table 2 of the paper):
+Expected output (recomputed from the released slice; fold-level values in
+Table 2 of the paper are computed from the full corpus and may differ by a
+few in the last digit):
 
 ```
 rows: 313  gold: 73
-cgi35 screening baseline AUPRC: 0.362
-DeepCARE ensemble AUPRC:        0.652
-gain: +80.1%
+cgi35 screening baseline AUPRC: 0.255
+DeepCARE ensemble AUPRC:        0.663
+gain: +159.8%
 ```
 
 ## Regenerating the figures
