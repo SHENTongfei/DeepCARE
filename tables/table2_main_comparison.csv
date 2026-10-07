@@ -1,10 +1,10 @@
-model,internal_AUPRC_foldlevel,internal_delta,holdout_AUPRC,holdout_gain_pct
-cgi35 screening baseline,0.047,0.0,0.242,0.0
-DeepFM,0.044,-0.003,0.419,73.0
-Logistic regression,0.033,-0.014,0.364,50.3
-FTTransformer,0.08,0.033,0.521,115.1
-TabNet,0.086,0.039,0.577,137.9
-Identity oracle (RF),0.947,0.9,0.673,177.7
-Identity oracle (XGB),0.966,0.919,0.826,241.1
-DeepCARE (8-seed mean),0.069,0.021,0.577,138.3
-DeepCARE (ensemble),0.069,0.021,0.647,167.2
+model,internal_AUPRC_foldlevel,internal_AUROC,internal_delta,holdout_AUPRC,holdout_AUROC,holdout_gain_pct
+cgi35 screening baseline,0.047,0.587,0.0,0.242,0.553,0.0
+DeepFM,0.044,0.655,-0.003,0.419,0.705,73.0
+Logistic regression,0.033,0.569,-0.014,0.364,0.532,50.3
+FTTransformer,0.08,0.579,0.033,0.521,0.677,115.1
+TabNet,0.086,0.668,0.039,0.577,0.727,137.9
+Identity oracle (RF),0.947,0.776,0.9,0.673,0.984,177.7
+Identity oracle (XGB),0.966,0.745,0.919,0.826,0.992,241.1
+DeepCARE (8-seed mean),0.069,0.68,0.021,0.577,0.771,138.3
+DeepCARE (ensemble),0.069,0.697,0.021,0.647,0.799,167.2
