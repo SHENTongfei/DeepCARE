@@ -1,4 +1,4 @@
-# CARE Fig1 v5 (professor reset): INTERNAL results, performance-first. 6x5=30, 14 panels.
+# CARE Fig1 v5: INTERNAL results, performance-first. 6x5=30, 14 panels.
 # DeepCARE naming throughout. Full non-tree baseline comparison (trees -> FigS1, noted).
 # Ablation panels removed (live in Fig4). 3D#1 = L+ bar3d seed x fold.
 import os, sys, json, csv, pathlib

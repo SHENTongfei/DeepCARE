@@ -26,8 +26,10 @@ data/
                                   DeepCARE ensemble score, and gold label
   internal_gold_pairs_sample.csv  the 284 internal clinical gold pairs
 supplement/
-  FigS1_extended_comparisons.pdf  extended comparisons and disclosure (10 panels)
-  FigS2_protocol.pdf              protocol, corpus, and audit (11 panels)
+  FigS1_extended_comparisons.pdf  extended comparisons and the full per-metric record (10 panels)
+  FigS2_protocol.pdf              protocol, corpus, and provenance (11 panels)
+  supplement.tex                  source of the Supplementary Material (S1-S3)
+  supplement.pdf                  compiled 3-page Supplementary Material
 tables/
   table2_main_comparison.csv      internal + holdout benchmark (partial)
   table3_components.csv           adopted-component economics

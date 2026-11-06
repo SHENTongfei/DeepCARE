@@ -255,7 +255,7 @@ def plain_bars(ax, labels, vals, color=LAV, base_ref=None):
         ax.axvline(base_ref, color=SAND, lw=0.8, ls='--')
     despine(ax); grid_x(ax)
 
-# ---- smoothing helpers (professor: smooth curves, robust to outliers) ----
+# ---- smoothing helpers (smooth curves, robust to outliers) ----
 def smooth_y(y, window=7):
     """Rolling-median then rolling-mean smoothing, reflect-padded edges
     (no edge shrink artifacts)."""
@@ -320,7 +320,7 @@ def cat_axis(ax, n_cats, axis='x', margin=0.5):
         ax.set_yticks(ticks)
         ax.set_ylim(1 - margin, n_cats + margin)
 
-# ---- smooth curve helpers (professor: smoother, fill follows smoothed curve) ----
+# ---- smooth curve helpers (smoother curves; fill follows the smoothed curve) ----
 def pchip_smooth(xs, ys, n=200, every=3):
     """PCHIP smoothing on deduped, sorted anchors (strictly increasing x)."""
     from scipy.interpolate import PchipInterpolator
