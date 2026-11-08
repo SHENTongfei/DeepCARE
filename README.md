@@ -30,11 +30,18 @@ supplement/
   FigS2_protocol.pdf              protocol, corpus, and provenance (11 panels)
   supplement.tex                  source of the Supplementary Material (S1-S3)
   supplement.pdf                  compiled 3-page Supplementary Material
+  FigS1_extended.png               600-dpi source image for Figure S1
+  FigS2_protocol.png               600-dpi source image for Figure S2
+  README.md                        supplementary file map (S1-S3 / MDPI Figure S1-S2)
 tables/
   table2_main_comparison.csv      internal + holdout benchmark (partial)
   table3_components.csv           adopted-component economics
   table4_case_study.csv           four-pair clinical case study
 ```
+
+## Supplementary Material
+
+The  directory contains the compiled Supplementary Material (), its LaTeX source, both supplementary figures in vector and 600-dpi raster form, and a  mapping S1-S3 to the journal Figure S1 / Figure S2 designations. See that README for the rebuild instructions and the journal-specific citation wording.
 
 ## Environment
 
