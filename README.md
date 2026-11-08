@@ -41,7 +41,11 @@ tables/
 
 ## Supplementary Material
 
-The  directory contains the compiled Supplementary Material (), its LaTeX source, both supplementary figures in vector and 600-dpi raster form, and a  mapping S1-S3 to the journal Figure S1 / Figure S2 designations. See that README for the rebuild instructions and the journal-specific citation wording.
+The `supplement/` directory contains the compiled Supplementary Material
+(`supplement.pdf`), its LaTeX source, both supplementary figures in vector and
+600-dpi raster form, and a `README.md` mapping S1-S3 to the journal Figure S1 /
+Figure S2 designations. See that README for the rebuild instructions and the
+journal-specific citation wording.
 
 ## Environment
 
