@@ -1,8 +1,7 @@
 # DeepCARE — Supplementary Material
 
 Source files for the Supplementary Material accompanying the manuscript
-*DeepCARE: a deep learning framework that transfers clinical allergen
-cross-reaction assessment to never-trained pairs*.
+*DeepCARE: Transferable assessment of clinically relevant allergen cross-reactivity for unseen pairs using a protein foundation language model-based deep learning framework*.
 
 ## File map
 

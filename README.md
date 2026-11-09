@@ -121,8 +121,9 @@ evaluation; the full corpus follows the source databases' distribution terms.
 
 If you use DeepCARE or the released slice, please cite the paper:
 
-> DeepCARE: a deep learning framework that transfers clinical allergen
-> cross-reaction assessment to never-trained pairs.
+> DeepCARE: Transferable assessment of clinically relevant allergen
+> cross-reactivity for unseen pairs using a protein foundation
+> language model-based deep learning framework.
 
 ## License
 
