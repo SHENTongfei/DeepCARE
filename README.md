@@ -29,7 +29,7 @@ supplement/
   FigS1_extended_comparisons.pdf  extended comparisons and the full per-metric record (10 panels)
   FigS2_protocol.pdf              protocol, corpus, and provenance (11 panels)
   supplement.tex                  source of the Supplementary Material (S1-S3)
-  supplement.pdf                  compiled 3-page Supplementary Material
+  supplement.pdf                  compiled 4-page Supplementary Material
   FigS1_extended.png               600-dpi source image for Figure S1
   FigS2_protocol.png               600-dpi source image for Figure S2
   README.md                        supplementary file map (S1-S3 / MDPI Figure S1-S2)
@@ -37,6 +37,8 @@ tables/
   table2_main_comparison.csv      internal + holdout benchmark (partial)
   table3_components.csv           adopted-component economics
   table4_case_study.csv           four-pair clinical case study
+graphical_abstract/
+  DeepCARE_LIFE_graphical_abstract.png   colour 3-D graphical abstract (MDPI Life)
 ```
 
 ## Supplementary Material
@@ -46,6 +48,12 @@ The `supplement/` directory contains the compiled Supplementary Material
 600-dpi raster form, and a `README.md` mapping S1-S3 to the journal Figure S1 /
 Figure S2 designations. See that README for the rebuild instructions and the
 journal-specific citation wording.
+
+## Graphical abstract
+
+The colour 3-D graphical abstract for the MDPI *Life* submission is
+[`graphical_abstract/DeepCARE_LIFE_graphical_abstract.png`](graphical_abstract/DeepCARE_LIFE_graphical_abstract.png)
+(4961 x 2808 px). It is the version approved for this submission.
 
 ## Environment
 
@@ -123,7 +131,7 @@ If you use DeepCARE or the released slice, please cite the paper:
 
 > DeepCARE: Transferable assessment of clinically relevant allergen
 > cross-reactivity for unseen pairs using a protein foundation
-> language model-based deep learning framework.
+> language model-based deep learning framework. Submitted to MDPI *Life*.
 
 ## License
 
