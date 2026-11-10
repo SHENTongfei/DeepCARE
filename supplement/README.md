@@ -14,6 +14,17 @@ equal-contribution and corresponding-author footnotes, and the full manuscript
 declarations (CRediT, funding, ethics, data availability, AI statement,
 conflicts of interest, supplementary-materials note).
 
+**v9.9 (2026-11-10, layout fix):** `mdpi.cls`'s `supfile` branch prints only
+`\maketitle` (title + authors) and silently **skips `\maketitlen`**, which is
+the command that typesets `\address`, `\corres` and `\firstnote`. The source now
+calls `\maketitlen` explicitly, so the three numbered affiliations, the
+corresponding-author addresses and the equal-contribution footnote appear in
+the cover area exactly as in `main.tex`. `\abstractkeywords` starts with a
+hard-coded `\vspace{-8pt}` that normally cancels `\maketitlen`'s trailing
+space; a compensating `\vspace{14pt}` keeps a clear gap above the Abstract.
+The duplicated affiliation blocks were removed from the body, leaving the
+author-abbreviation legend and the joint-first-author note.
+
 ## File map
 
 | File | Role | Content |
@@ -84,7 +95,10 @@ compilable end to end.
 - Figure/table S-numbering comes from `mdpi.cls` itself; do not redefine
   `\thefigure` / `\thetable` locally.
 - Because `supfile` skips `\maketitlen` and `\abstractkeywords`, this source
-  emits the abstract/keywords block and the author-information block explicitly
-  in the document body.
+  calls both explicitly after `\begin{document}`: `\maketitlen` restores the
+  affiliations / correspondence / footnotes, and `\abstractkeywords` emits the
+  abstract and keywords. The `\vspace{14pt}` between them offsets the
+  `\vspace{-8pt}` baked into `\abstractkeywords`; without it the Abstract is
+  pulled flush against the author line.
 - Code, the released data slice, and the frozen result tables live in `code/`,
   `data/` and `tables/`; see the repository root README for reproduction.

@@ -8,6 +8,14 @@
 %% v9.8 / 2026-11-10 : MDPI template, full 16-author roster, affiliations,
 %%   equal-contribution and corresponding footnotes, CRediT, funding,
 %%   data availability, AI statement and conflicts of interest.
+%% v9.9 / 2026-11-10 : layout fix.  The supfile branch of mdpi.cls prints only
+%%   \maketitle (title + authors) and skips \maketitlen, which is the command
+%%   that actually typesets \address / \corres / \firstnote.  Call \maketitlen
+%%   explicitly so the affiliation block appears in the cover area, and add
+%%   \vspace{14pt} to offset the hard-coded \vspace{-8pt} at the start of
+%%   \abstractkeywords (that -8pt normally cancels \maketitlen's trailing
+%%   space; without \maketitlen it pulled the Abstract flush against the
+%%   author line).
 %% Compile: pdflatex supplement.tex  (twice, for LastPage/refs)
 %% Dependencies (shared with main.tex): mdpi.cls, Definitions/, figures/
 %% =====================================================================
@@ -79,11 +87,18 @@ code released with the manuscript.}
 \begin{document}
 \nolinenumbers  % "submit" status turns line numbers on; supplementary is cleaner without them
 
-%% supfile omits \maketitlen and \abstractkeywords, so emit the abstract block
-%% and the author information block explicitly, using MDPI template commands.
+%% mdpi.cls runs \maketitle (title + authors) automatically for supfile, but
+%% SKIPS \maketitlen -- the command that typesets \address, \corres and
+%% \firstnote.  Restore the standard article order explicitly.
+\maketitlen
+\let\maketitlen\relax
+%% \abstractkeywords starts with a hard-coded \vspace{-8pt} that normally
+%% cancels \maketitlen's trailing space.  Net +6pt here keeps a clear gap
+%% between the affiliation/footnote block and the Abstract.
+\vspace{14pt}
 \abstractkeywords
 
-\vspace{6pt}
+\vspace{10pt}
 {\fontsize{9}{11.5}\selectfont
 \noindent\textbf{Manuscript.} This is the Supplementary Material accompanying
 the article \textit{DeepCARE: Transferable assessment of clinically relevant
@@ -95,7 +110,7 @@ the analysis code are openly available at
 \url{https://github.com/SHENTongfei/DeepCARE}.
 
 \vspace{6pt}
-\noindent\textbf{Author roster (16 authors, in manuscript order).}
+\noindent\textbf{Author abbreviations (16 authors, in manuscript order).}
 Tongfei Shen $^{1,2,\dagger}$ (T.S.);
 Jie Liu $^{1,\dagger}$ (J.L.);
 Ziao Pan $^{1,\dagger}$ (Z.P.);
@@ -114,23 +129,11 @@ Yurong Qin $^{3,*}$ (Y.Q.);
 Shouqiang Sun $^{1,*}$ (S.S.).
 
 \vspace{6pt}
-\noindent\textbf{Affiliations.}
-$^{1}$ School of Information Science and Engineering, Qingdao Huanghai
-University, Qingdao 266427, Shandong, China;
-$^{2}$ Department of Computer Science, City University of Hong Kong, Kowloon,
-Hong Kong SAR, China;
-$^{3}$ School of Food and Drugs, Shenzhen Polytechnic University, Shenzhen
-518055, China.
-
-\vspace{6pt}
-\noindent\textbf{$^{\dagger}$ Equal contribution.}
-Tongfei Shen, Jie Liu, Ziao Pan and Peng Li contributed equally to this work
-and are joint first authors.
-
-\vspace{6pt}
-\noindent\textbf{$^{*}$ Correspondence.}
-Yurong Qin (qinyurong@szpu.edu.cn) and Shouqiang Sun
-(sunsq@qdhhc.edu.cn) are the two corresponding authors.
+\noindent\textbf{$^{\dagger}$ Joint first authors.}
+Tongfei Shen, Jie Liu, Ziao Pan and Peng Li contributed equally to this work.
+The three numbered affiliations and the $^{*}$ corresponding-author
+addresses are given in the cover block above, following the same layout as
+the main manuscript; the full CRediT statement appears at the end of this file.
 }
 
 \vspace{12pt}
